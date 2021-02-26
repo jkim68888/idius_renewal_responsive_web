@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+/* 나눔고딕 */
+@font-face{
+    font-family: Nanum Gothic;
+    font-weight: 400;
+    src: local(※), url(../fonts/NanumGothic-Regular.woff) format('woff');
+}
+@font-face{
+    font-family: Nanum Gothic;
+    font-weight: 700;
+    src: local(※), url(../fonts/NanumGothic-Bold.woff) format('woff');
+}
+@font-face{
+    font-family: Nanum Gothic;
+    font-weight: 800;
+    src: local(※), url(../fonts/NanumGothic-ExtraBold.woff) format('woff');
+}
+
+/* Akaya Telivigala */
+@font-face{
+    font-family: Akaya Telivigala;
+    font-weight: 400;
+    src: local(※), url(../fonts/AkayaTelivigala-Regular.woff) format('woff');
+}
+

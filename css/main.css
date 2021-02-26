@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+/* pc, tablet, mobile 공통 */
+
+/* main */
+main{ width: 100%; }
+main .swiper-container{ width: 100%; }
+main .swiper-slide{ width: 100%; background-repeat: no-repeat; background-position: center; background-size: 100% 100%; }
+
+
+/* pc */
+@media screen and (min-width: 1024px){
+    main .swiper-slide{ height: 670px; }
+    main .slide01{ background-image: url(../images/main/main_bn01_pc.jpg); }
+    main .slide02{ background-image: url(../images/main/main_bn02_pc.jpg); }
+    main .slide03{ background-image: url(../images/main/main_bn03_pc.jpg); }
+}
+
+
+/* tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    main .swiper-slide{ height: 693px; }
+    main .slide01{ background-image: url(../images/main/main_bn01_tablet.jpg); }
+    main .slide02{ background-image: url(../images/main/main_bn02_tablet.jpg); }
+    main .slide03{ background-image: url(../images/main/main_bn03_tablet.jpg); }
+}
+
+/* mobile */
+@media screen and (max-width: 767px){
+    main .swiper-slide{ height: 337px; }
+    main .slide01{ background-image: url(../images/main/main_bn01_mobile@2x.png); }
+    main .slide02{ background-image: url(../images/main/main_bn02_mobile.png); }
+    main .slide03{ background-image: url(../images/main/main_bn03_mobile@2x.png); }
+}
