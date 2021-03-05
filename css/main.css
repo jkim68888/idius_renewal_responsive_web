@@ -3,26 +3,49 @@
 /* pc, tablet, mobile 공통 */
 
 /* main */
-main{ width: 100%; }
+main{ position: relative; width: 100%; }
 main .swiper-container{ width: 100%; }
-main .swiper-slide{ width: 100%; background-repeat: no-repeat; background-position: center; background-size: 100% 100%; }
-
+main .swiper-slide{ width: 100%; background-repeat: no-repeat; background-position: center; background-size: cover; }
+main .textbox{ position: absolute; top: 18%; left: 15%; }
+main .textbox h2{ margin-bottom: 1rem; font-family: 'Akaya Telivigala', cursive; }
+main .slide01 h2{ color: #8E5414; }
+main .slide02 h2, main .slide02 p{ color: #CF4D36; }
+main .slide03 h2, main .slide03 p{ color: #3A261D; }
+main .slide01 p{ color: #603007; }
+main .textbox span{ color: #555555; }
+main .textbox a{ display: block; margin: 6rem 0; }
+main .only_pc{ display: none; } 
+main .only_mobile{ display: none; } 
+main .swiper-button-next, main .swiper-button-prev{ color: #FF7B30; }
+main .swiper-pagination-bullet-active-main{ background-color: #FF7B30; }
+main .swiper-pagination-bullet{ width: 12px; height: 12px; }
 
 /* pc */
 @media screen and (min-width: 1024px){
+    /* main */
     main .swiper-slide{ height: 670px; }
     main .slide01{ background-image: url(../images/main/main_bn01_pc.jpg); }
     main .slide02{ background-image: url(../images/main/main_bn02_pc.jpg); }
     main .slide03{ background-image: url(../images/main/main_bn03_pc.jpg); }
+    main .textbox h2{ font-size: 4.68rem; }
+    main .textbox p{ line-height: 3.625rem; font-size: 2.375rem; }
+    main .textbox span.only_pc{ font-size: 2.25rem; font-weight: 700; }
+    main .only_pc{ display: inline; }
+    main .arrow{ position: relative; top: -7px; left: 10px; }
 }
 
 
 /* tablet */
-@media screen and (min-width: 768px) and (max-width: 1023px){
+@media screen and (max-width: 1023px){
     main .swiper-slide{ height: 693px; }
     main .slide01{ background-image: url(../images/main/main_bn01_tablet.jpg); }
     main .slide02{ background-image: url(../images/main/main_bn02_tablet.jpg); }
     main .slide03{ background-image: url(../images/main/main_bn03_tablet.jpg); }
+    main .textbox h2{ font-size: 3.75rem; }
+    main .only_mobile{ display: inline; font-size: 2.25rem; font-weight: 700; }
+    main .textbox{ top: 35%; left: 10%; }
+    main .arrow{ position: relative; top: -5px; left: 5px; }
+    main .arrow img{ width: 5rem; }
 }
 
 /* mobile */
@@ -31,4 +54,15 @@ main .swiper-slide{ width: 100%; background-repeat: no-repeat; background-positi
     main .slide01{ background-image: url(../images/main/main_bn01_mobile@2x.png); }
     main .slide02{ background-image: url(../images/main/main_bn02_mobile.png); }
     main .slide03{ background-image: url(../images/main/main_bn03_mobile@2x.png); }
+    main .textbox h2{ font-size: 1.75rem; }
+    main .only_mobile{ font-size: 1rem; }
+    main .swiper-button-next, main .swiper-button-prev{ display: none; }
+    main .textbox a{ margin: 3rem 0; }
+    main .arrow{ position: relative; top: -1px; left: 2px; }
+    main .arrow img{ width: 3rem; }
+}
+
+/* iphone5 & se */
+@media screen and (max-width: 320px){
+
 }
