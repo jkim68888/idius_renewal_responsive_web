@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 /* pc, tablet, mobile 공통 */
-
 /* main */
 main{ position: relative; width: 100%; }
 main .swiper-container{ width: 100%; }
@@ -19,6 +18,14 @@ main .only_mobile{ display: none; }
 main .swiper-button-next, main .swiper-button-prev{ color: #FF7B30; }
 main .swiper-pagination-bullet-active-main{ background-color: #FF7B30; }
 main .swiper-pagination-bullet{ width: 12px; height: 12px; }
+/* today_best */
+.today_best{ width: 100%; overflow: hidden; padding: 80px 0; box-sizing: border-box; }
+.today_best h2{ width: 100%; margin-bottom: 30px; text-align: center; font-weight: 700; }
+.today_best .tabbar{ width: 100%; max-width: 1180px; margin: 0 auto 20px; }
+.today_best .tabbar ul{ display: flex; justify-content: center; }
+.today_best .tabbar li{ flex: 1; text-align: center; border: 1px solid #ccc; color: #ccc; }
+.today_best .tabbar li.active{ border: none; background-color: #ccc; color: #444; }
+.today_best .tabbar a{ display: block; }
 
 /* pc */
 @media screen and (min-width: 1024px){
@@ -32,6 +39,9 @@ main .swiper-pagination-bullet{ width: 12px; height: 12px; }
     main .textbox span.only_pc{ font-size: 2.25rem; font-weight: 700; }
     main .only_pc{ display: inline; }
     main .arrow{ position: relative; top: -7px; left: 10px; }
+    /* today_best */
+    .today_best h2{ font-size: 2.375rem; }
+    .today_best .tabbar li{ height: 45px; line-height: 45px; }
 }
 
 
@@ -46,7 +56,12 @@ main .swiper-pagination-bullet{ width: 12px; height: 12px; }
     main .textbox{ top: 35%; left: 10%; }
     main .arrow{ position: relative; top: -5px; left: 5px; }
     main .arrow img{ width: 5rem; }
+    /* today_best */
+    .today_best{ margin: 0 15px; }
+    .today_best h2{ font-size: 2rem; }
+    .today_best .tabbar li{ height: 35px; line-height: 35px; }
 }
+
 
 /* mobile */
 @media screen and (max-width: 767px){
@@ -54,13 +69,18 @@ main .swiper-pagination-bullet{ width: 12px; height: 12px; }
     main .slide01{ background-image: url(../images/main/main_bn01_mobile@2x.png); }
     main .slide02{ background-image: url(../images/main/main_bn02_mobile.png); }
     main .slide03{ background-image: url(../images/main/main_bn03_mobile@2x.png); }
-    main .textbox h2{ font-size: 1.75rem; }
-    main .only_mobile{ font-size: 1rem; }
+    main .textbox h2{ font-size: 1.95rem; }
+    main .only_mobile{ font-size: 1.25rem; }
     main .swiper-button-next, main .swiper-button-prev{ display: none; }
     main .textbox a{ margin: 3rem 0; }
     main .arrow{ position: relative; top: -1px; left: 2px; }
     main .arrow img{ width: 3rem; }
+    /* today_best */
+    .today_best{ padding: 40px 0; }
+    .today_best h2{ font-size: 1.28rem; }
+    .today_best .tabbar li{ height: 25px; line-height: 25px; }
 }
+
 
 /* iphone5 & se */
 @media screen and (max-width: 320px){
