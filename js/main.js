@@ -25,20 +25,25 @@ $(document).ready(function(){
     var content01 = '.today_best .contents01';
     var content02 = '.today_best .contents02';
 
+    $(content02).stop().fadeOut(0);
+    $(content01).stop().fadeIn(0);
+    $(tabbar).eq(1).removeClass('active');
+    $(tabbar).eq(0).addClass('active');
+
     $(tabbar).eq(0).find('a').click(function(e){
-        e.preventdefault();
+        e.preventDefault();
         
-        $(content02).stop().fadeOut('fast');
-        $(content01).stop().fadeIn('fast');
+        $(content02).stop().fadeOut(0);
+        $(content01).stop().fadeIn(0);
         $(tabbar).eq(1).removeClass('active');
         $(tabbar).eq(0).addClass('active');
     });
 
     $(tabbar).eq(1).find('a').click(function(e){
-        e.preventdefault();  
+        e.preventDefault();
         
-        $(content01).stop().fadeOut('fast');
-        $(content02).stop().fadeIn('fast');
+        $(content01).stop().fadeOut(0);
+        $(content02).stop().fadeIn(0);
         $(tabbar).eq(0).removeClass('active');
         $(tabbar).eq(1).addClass('active');
     });
