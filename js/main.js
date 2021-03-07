@@ -49,3 +49,27 @@ $(document).ready(function(){
     });
     
 });
+
+//review
+$(document).ready(function(){
+    var swiper = new Swiper('.review .swiper-container', {
+        slidesPerView: 3.2,
+        spaceBetween: 20,
+        // init: false,
+        breakpoints: {
+          768: {
+            slidesPerView: 3.2,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 3.5,
+            spaceBetween: 30,
+          },
+        },
+        navigation: {
+            nextEl: '.review .swiper-button-next',
+            prevEl: '.review .swiper-button-prev',
+            clickable: true,
+        },
+    });
+});
