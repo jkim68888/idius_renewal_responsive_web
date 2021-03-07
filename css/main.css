@@ -62,8 +62,8 @@ main .swiper-pagination-bullet{ width: 12px; height: 12px; }
     /* today_best */
     .today_best h2{ font-size: 2.375rem; }
     .today_best .tabbar li{ height: 45px; line-height: 45px; }
-    .today_best .contents li{ height: 500px; }
-    .today_best .contents .img{ height: 360px; }
+    .today_best .contents li{ height: 510px; max-height: auto; }
+    .today_best .contents .img{ height: 360px; max-height: auto; }
     .today_best .contents01 .img01{ background-image: url(../images/main/bestwork_img01_pc.jpg); }
     .today_best .contents01 .img02{ background-image: url(../images/main/bestwork_img02_pc.jpg); }
     .today_best .contents01 .img03{ background-image: url(../images/main/bestwork_img03_pc.jpg); }
@@ -91,8 +91,8 @@ main .swiper-pagination-bullet{ width: 12px; height: 12px; }
     .today_best{ padding: 0 15px; }
     .today_best h2{ font-size: 2rem; }
     .today_best .tabbar li{ height: 35px; line-height: 35px; }
-    .today_best .contents li{ height: 600px; }
-    .today_best .contents .img{ height: 440px; }
+    .today_best .contents li{ height: 590px; max-height: auto; }
+    .today_best .contents .img{ height: 440px; max-height: auto; }
     .today_best .contents01 .img01{ background-image: url(../images/main/bestwork_img01_tablet.jpg); }
     .today_best .contents01 .img02{ background-image: url(../images/main/bestwork_img02_tablet.jpg); }
     .today_best .contents01 .img03{ background-image: url(../images/main/bestwork_img03_tablet.jpg); }
@@ -121,8 +121,8 @@ main .swiper-pagination-bullet{ width: 12px; height: 12px; }
     .today_best h2{ font-size: 1.28rem; }
     .today_best .tabbar li{ height: 25px; line-height: 25px; }
     .today_best .contents h3{ font-size: 0.85rem; }
-    .today_best .contents li{ height: 500px; }
-    .today_best .contents .img{ height: 360px; }
+    .today_best .contents li{ display: block; }
+    .today_best .contents .img{ display: block; width: 100%; height: auto; overflow: hidden; background-size: 100% 100%; background-position: 50%; }
     .today_best .contents01 .img01{ background-image: url(../images/main/bestwork_img01_mobile@2x.png); }
     .today_best .contents01 .img02{ background-image: url(../images/main/bestwork_img02_mobile@2x.png); }
     .today_best .contents01 .img03{ background-image: url(../images/main/bestwork_img03_mobile@2x.png); }
@@ -131,7 +131,9 @@ main .swiper-pagination-bullet{ width: 12px; height: 12px; }
     .today_best .contents02 .img02{ background-image: url(../images/main/bestclass_img02_mobile@2x.png); }
     .today_best .contents02 .img03{ background-image: url(../images/main/bestclass_img03_mobile@2x.png); }
     .today_best .contents02 .img04{ background-image: url(../images/main/bestclass_img04_mobile@2x.png); }
-    
+    .today_best .contents del{ font-size: 0.7rem; }
+    .today_best .contents .big_orange{ top: -3px; font-size: 0.875rem; }
+    .today_best .contents .arrow{ top: 3px; margin: 0; background-image: url(../images/main/best_arrow_mobile@2x.png); background-size: 100% 100%; }
 }
 
 
