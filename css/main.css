@@ -26,14 +26,13 @@ main .swiper-pagination-bullet{ width: 12px; height: 12px; }
 .today_best .tabbar li{ flex: 1; text-align: center; border: 1px solid #ccc; }
 .today_best .tabbar li:first-child{ margin-left: 10px; }
 .today_best .tabbar li:last-child{ margin-right: 10px; }
-.today_best .tabbar a{ color: #ccc; }
+.today_best .tabbar a{ display: block; font-size: 1.75rem; color: #ccc; }
 .today_best .tabbar li.active{ border: none; background-color: #ccc; color: #444; }
 .today_best .tabbar li.active a{ color: #444; }
-.today_best .tabbar a{ display: block; }
 .today_best .contents{ width: 1180px; max-width: 100%; margin: 0 auto; }
 .today_best .contents ul{ width: 100%; display: flex; justify-content: space-between; flex-wrap: wrap; }
 .today_best .contents li{ position: relative; padding: 0 10px; text-align: center; }
-.today_best .contents .img{ background-repeat: no-repeat; background-position: center; }
+.today_best .contents .img{ max-width: 100%; max-height: 100%; height: calc(55vw); background-repeat: no-repeat; background-position: center; background-size: 100% 100%; }
 .today_best .contents .medal{ position: absolute; top: 0; left: 20px; font-size: 1.875rem; color: #fff; }
 .today_best .contents .gold{ width: 32px; height: 42px; background-image: url(../images/main/best_gold_ico_pc.png); }
 .today_best .contents .silver{ width: 32px; height: 42px; background-image: url(../images/main/best_silver_ico_pc.png); }
@@ -41,11 +40,11 @@ main .swiper-pagination-bullet{ width: 12px; height: 12px; }
 .today_best .contents .normal{ width: 32px; height: 42px; background-image: url(../images/main/best_normal_ico_pc.png); }
 .today_best .contents h3{ margin: 15px 0 10px; font-size: 1.25rem; font-weight: 700; }
 .today_best .contents h4{ margin: 0 0 10px; font-size: 1rem; }
-.today_best .contents p{ display: flex; justify-content: center; font-size: 1rem; }
+.today_best .contents p{ display: flex; justify-content: center; margin-bottom: 20px; font-size: 1rem; }
 .today_best .contents .arrow{ position: relative; top: 7px; width: 51px; height: 5px; margin: 0 10px; background-image: url(../images/main/best_arrow_ico_pc.png); }
 .today_best .contents .big_orange{ position: relative; top: -3px; font-size: 1.25rem; color: #FF7B30; font-weight: 700; }
-.today_best .contents .cart{ position: absolute; top: 28%; left: 33%; width: 100px; height: 100px; border-radius: 100%; background-color: #fff; box-shadow: 5px 5px 5px rgba(0,0,0,0.2); opacity: 0; }
-.today_best .contents .cart_p{ position: absolute; top: 65%; left: 22%; }
+/* intro */
+
 
 /* pc */
 @media screen and (min-width: 1024px){
@@ -62,8 +61,7 @@ main .swiper-pagination-bullet{ width: 12px; height: 12px; }
     /* today_best */
     .today_best h2{ font-size: 2.375rem; }
     .today_best .tabbar li{ height: 45px; line-height: 45px; }
-    .today_best .contents li{ height: 510px; max-height: auto; }
-    .today_best .contents .img{ height: 360px; max-height: auto; }
+    .today_best .contents .img{ height: 350px; }
     .today_best .contents01 .img01{ background-image: url(../images/main/bestwork_img01_pc.jpg); }
     .today_best .contents01 .img02{ background-image: url(../images/main/bestwork_img02_pc.jpg); }
     .today_best .contents01 .img03{ background-image: url(../images/main/bestwork_img03_pc.jpg); }
@@ -72,7 +70,13 @@ main .swiper-pagination-bullet{ width: 12px; height: 12px; }
     .today_best .contents02 .img02{ background-image: url(../images/main/bestclass_img02_pc.jpg); }
     .today_best .contents02 .img03{ background-image: url(../images/main/bestclass_img03_pc.jpg); }
     .today_best .contents02 .img04{ background-image: url(../images/main/bestclass_img04_pc.jpg); }
+    .today_best .contents p{ margin-bottom: 0; }
+    .today_best .contents .cart{ position: absolute; top: 28%; left: 33%; width: 100px; height: 100px; border-radius: 100%; background-color: #fff; box-shadow: 5px 5px 5px rgba(0,0,0,0.2); opacity: 0; transition: 0.3s; }
     .today_best .contents .cart_img{ width: 100%; height: 100%; background-image: url(../images/main/best_cart_ico_pc.png); background-repeat: no-repeat; background-position: center 15px; }
+    .today_best .contents .cart_p{ position: absolute; top: 65%; left: 22%; }
+    .today_best .contents li:hover .cart{ opacity: 1; }
+    /* intro */
+    
 }
 
 
@@ -90,9 +94,7 @@ main .swiper-pagination-bullet{ width: 12px; height: 12px; }
     /* today_best */
     .today_best{ padding: 0 15px; }
     .today_best h2{ font-size: 2rem; }
-    .today_best .tabbar li{ height: 35px; line-height: 35px; }
-    .today_best .contents li{ height: 590px; max-height: auto; }
-    .today_best .contents .img{ height: 440px; max-height: auto; }
+    .today_best .tabbar li{ height: 40px; line-height: 40px; }
     .today_best .contents01 .img01{ background-image: url(../images/main/bestwork_img01_tablet.jpg); }
     .today_best .contents01 .img02{ background-image: url(../images/main/bestwork_img02_tablet.jpg); }
     .today_best .contents01 .img03{ background-image: url(../images/main/bestwork_img03_tablet.jpg); }
@@ -101,6 +103,13 @@ main .swiper-pagination-bullet{ width: 12px; height: 12px; }
     .today_best .contents02 .img02{ background-image: url(../images/main/bestclass_img02_tablet.jpg); }
     .today_best .contents02 .img03{ background-image: url(../images/main/bestclass_img03_tablet.jpg); }
     .today_best .contents02 .img04{ background-image: url(../images/main/bestclass_img04_tablet.jpg); }
+    .today_best .contents h3{ font-size: 1.5rem; }
+    .today_best .contents h4{ font-size: 1.2rem; }
+    .today_best .contents del{ font-size: 1.25rem; }
+    .today_best .contents .big_orange{ top: -2px; font-size: 1.375rem; }
+    .today_best .contents .cart{ position: absolute; bottom: 150px; right: 20px; width: 70px; height: 70px; border-radius: 100%; background-color: #FF7B30; box-shadow: 5px 5px 5px rgba(0,0,0,0.2); }
+    .today_best .contents .cart_img{ width: 100%; height: 100%; background-image: url(../images/main/best_cart_tablet.png); background-repeat: no-repeat; background-position: center 15px; }
+    .today_best .contents .cart_p{ display: none; }
 }
 
 
@@ -120,9 +129,7 @@ main .swiper-pagination-bullet{ width: 12px; height: 12px; }
     .today_best{ padding: 40px 0; }
     .today_best h2{ font-size: 1.28rem; }
     .today_best .tabbar li{ height: 25px; line-height: 25px; }
-    .today_best .contents h3{ font-size: 0.85rem; }
-    .today_best .contents li{ display: block; }
-    .today_best .contents .img{ display: block; width: 100%; height: auto; overflow: hidden; background-size: 100% 100%; background-position: 50%; }
+    .today_best .tabbar a{ font-size: 1rem; }
     .today_best .contents01 .img01{ background-image: url(../images/main/bestwork_img01_mobile@2x.png); }
     .today_best .contents01 .img02{ background-image: url(../images/main/bestwork_img02_mobile@2x.png); }
     .today_best .contents01 .img03{ background-image: url(../images/main/bestwork_img03_mobile@2x.png); }
@@ -131,9 +138,13 @@ main .swiper-pagination-bullet{ width: 12px; height: 12px; }
     .today_best .contents02 .img02{ background-image: url(../images/main/bestclass_img02_mobile@2x.png); }
     .today_best .contents02 .img03{ background-image: url(../images/main/bestclass_img03_mobile@2x.png); }
     .today_best .contents02 .img04{ background-image: url(../images/main/bestclass_img04_mobile@2x.png); }
+    .today_best .contents h3{ font-size: 1rem; }
+    .today_best .contents h4{ font-size: 0.75rem; }
     .today_best .contents del{ font-size: 0.7rem; }
-    .today_best .contents .big_orange{ top: -3px; font-size: 0.875rem; }
+    .today_best .contents .big_orange{ top: -2px; font-size: 0.875rem; }
     .today_best .contents .arrow{ top: 3px; margin: 0; background-image: url(../images/main/best_arrow_mobile@2x.png); background-size: 100% 100%; }
+    .today_best .contents .cart{ bottom: 105px; right: 20px; width: 45px; height: 45px; }
+    .today_best .contents .cart_img{ background-image: url(../images/main/best_cart_mobile@2x.png); background-size: 60% 60%; background-position: center; }
 }
 
 
