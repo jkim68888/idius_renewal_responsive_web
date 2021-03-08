@@ -10,6 +10,10 @@ table{ border-spacing: 0; border-collapse: collapse; }
 html, body{ width: 100%; height: 100%; }
 
 /* pc, tablet, mobile 공통 */
+/* header */
+header .only_pc, header .only_mobile{ display: none; }
+header{ width: 100%; border-bottom: 1px solid #707070; }
+header .wrap{ width: 1180px; max-width: 100%; margin: 0 auto; }
 /* footer */
 footer{ width: 100%; background-color: #dfdfdf; }
 footer .fbottom{ width: 100%; background-color: #999; }
@@ -27,9 +31,16 @@ footer .sns{ display: flex; }
 /* pc */
 @media screen and (min-width: 1024px){
     *{ font-size: 16px; }
+    /* header */
+    header{ position: relative; height: 120px; }
+    header h1{ position: absolute; top: 58px; width: 100px; height: 40px; background-image: url(../images/common/header_logo_pc.png); }
+    header .top_nav{ position: absolute; top: 0; left: 0; width: 100%; height: 40px; border-bottom: 1px solid #707070; } 
+    header .top_nav .wrap{ position: relative; width: 1180px; max-width: 100%; margin: 0 auto; }
+    header .top_nav ul{ position: absolute; right: 0; }
+    header .top_nav li{ float: left; padding-left: 25px; line-height: 40px; }
     /* footer */
     footer{ padding-top: 50px; }
-    footer .wrap{ width: 1180px; margin: 0 auto; }
+    footer .wrap{ width: 1180px; max-width: 100%; margin: 0 auto; }
     footer .fbottom{ padding: 20px 0; }
     footer h1{ padding-bottom: 60px; }
     footer .nav ul{ padding-bottom: 50px; }
