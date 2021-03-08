@@ -39,7 +39,7 @@ footer .sns{ display: flex; }
     /* header */
     header{ position: relative; height: 120px; }
     header .only_pc{ display: inline; }
-    header h1{ position: absolute; top: 58px; width: 100px; height: 40px; background-image: url(../images/common/header_logo_pc.png); }
+    header .main_logo{ position: absolute; top: 58px; width: 100px; height: 40px; background-image: url(../images/common/header_logo_pc.png); }
     header .top_nav{ position: absolute; top: 0; left: 0; width: 100%; height: 40px; border-bottom: 1px solid #707070; } 
     header .top_nav .wrap{ position: relative; width: 1180px; max-width: 100%; margin: 0 auto; }
     header .top_nav ul{ position: absolute; right: 0; }
@@ -47,9 +47,14 @@ footer .sns{ display: flex; }
     header .gnb{ position: absolute; top: 68px; padding-left: 9rem; }
     header .gnb > ul > li > a{ font-size: 1.5rem; }
     header .gnb > ul{ display: flex; }
-    header .gnb > ul > li{ padding-right: 3rem; }
-    header .gnb > ul > li:hover .main_nav{ color: #FF7B30; }
-    header .sub_nav{ display: none; }
+    header .gnb > ul > li{ position: relative; padding-right: 3rem; }
+    header .gnb li:hover .main_nav{ color: #FF7B30; }
+    header .sub_nav li:hover{ background-color: rgba(255,123,48,0.3); }
+    header .sub_nav{ position: absolute; top: 54px; left: -20px; z-index: 3; width: 100%; line-height: 40px; background-color: #fff; }
+    header .sub01{ height: 240px; }
+    header .sub02{ height: 160px; }
+    header .sub_nav li{ text-align: center; }
+    header .sub_nav a{ display: block; }
     header .sWrap{ position: absolute; top: 64px; width: 30rem; height: 38px; margin-left: 23rem; }
     header #searchbox{ top: 2px; left: 2px; line-height: 30px; font-size: 0.95rem; }
     header .search{ position: relative; float: left; width: 45%; height: 100%; border: 2px solid #FF7B30; }
@@ -92,7 +97,7 @@ footer .sns{ display: flex; }
     /* header */
     header{ position: relative; height: 75px; }
     header .only_mobile{ display: inline; }
-    header h1{ position: absolute; top: 0; left: 0; right: 0; bottom: 30px; margin: auto; width: 60px; height: 24px; background-image: url(../images/common/header_logo_tablet.png); }
+    header .main_logo{ position: absolute; top: 0; left: 0; right: 0; bottom: 30px; margin: auto; width: 60px; height: 24px; background-image: url(../images/common/header_logo_tablet.png); }
     header .panel_ico{ position: absolute; bottom: 33px; left: 15px; }
     header .shop{ position: absolute; bottom: 33px; right: 15px; }
     header .shop .shop_ico{ display: block; width: 32px; height: 32px; background-image: url(../images/common/header_cart_ico_tablet.png); background-repeat: no-repeat; background-position: center; }
@@ -102,7 +107,27 @@ footer .sns{ display: flex; }
     header .search .ico{ display: block; position: absolute; top: 2px; right: 5px; width: 20px; height: 20px; background-image: url(../images/common/header_search_ico_tablet.png); }
     header .ranking{ float: right; width: 45%; height: 90%; border-bottom: 2px solid #FF7B30; }
     header .ranking .click{ position: absolute; bottom: 8px; right: 20px; width: 13px; height: 11px; background-image: url(../images/common/header_rank_ico_tablet.png); }
-    header .gnb, header .top_nav{ display: none; }
+    header .panel_bg{ position: fixed; top: 0; left: -80%; width: 80vw; height: 100vh; z-index: 10000; background-color: #F8F5EE; transition: 0.9s; }
+    header .panel_bg .banner{ position: absolute; top: 0; left: 0; width: 100%; height: 3.4rem; background-image: url(../images/common/panel_bn_tablet.png); background-position: center; }
+    header .panel_bg .panel_logo{ position: absolute; top: 70px; width: 100%; height: 100%; background-image: url(../images/common/panel_logo_tablet.png); background-repeat: no-repeat; background-position: calc(50%) top; }
+    header .panel_bg .top_nav{ position: absolute; top: 9.5rem; width: 100%; height: 8rem; padding: 0 15px; background-color: #999; }
+    header .panel_bg .top_nav .wrap li a{ position: relative; top: 6rem; left: 6rem; color: #fff; font-size: 1rem; }
+    header .panel_bg .top_nav .wrap ul{ display: flex; justify-content: space-between; }
+    header .panel_bg .top_nav .wrap li{ width: 33.3%; height: 8rem; border-right: 1px solid #fff; background-repeat: no-repeat; background-position: center 20px; }
+    header .panel_bg .top_nav .wrap li:nth-child(1){ background-image: url(../images/common/panel_login_ico_tablet.png); background-position: calc(50% - 10px) 20px; }
+    header .panel_bg .top_nav .wrap li:nth-child(2){ background-image: url(../images/common/panel_join_ico_tablet.png); }
+    header .panel_bg .top_nav .wrap li:nth-child(3){ background-image: url(../images/common/panel_faq_ico_tablet.png); border-right: none; }
+    header .panel_bg .gnb{ position: absolute; top: 22rem; width: 100%; padding: 0 15px; }
+    header .panel_bg .gnb > ul > li{ width: 100%; padding-bottom: 3.5rem; background-image: url(../images/common/panel_btn_tablet.png); background-repeat: no-repeat; background-position: right 5px; }
+    header .panel_bg .main_nav{ display: block; width: 100%; font-size: 1.5rem; font-weight: 700; padding: 1rem 0; } 
+    header .panel_bg .sub_nav{ display: none; }
+    header .panel_bg .sub_nav li{ width: 100%; line-height: 3rem; background-color: #ebebeb; border-bottom: 1px solid #707070; }
+    header .panel_bg .sub_nav a{ display: block; width: 100%; }
+    header .panel_bg .sub_nav li:first-child{ padding-top: 10px; border-top: 1px solid #707070; }
+    header .panel_bg .close_btn{ position: absolute; top: 0.5rem; left: 0.5rem; width: 40px; height: 40px; z-index: 100000; }
+    header .panel_bg .close_btn a{ display: block; width: 100%; height: 100%; background-image: url(../images/common/panel_close_tablet.png); background-repeat: no-repeat; }
+    .panel_ico.active .panel_bg{ left: 0; }
+    .close_btn.active .panel_bg{ left: -80%; }
     /* footer */
     footer{ padding-top: 38px; }
     footer .ftop, footer .fbottom{ padding-left: 15px; }
@@ -124,6 +149,11 @@ footer .sns{ display: flex; }
 /* mobile */
 @media screen and (max-width: 767px){
     *{ font-size: 14px; }
+    /* header */
+    header .panel_bg{ left: -100%; width: 100vw; }
+    header .panel_bg .banner{ background-image: url(../images/common/panel_bn_mobile@2x.png); background-size: 100% 100%; }
+    .panel_ico.active .panel_bg{ left: 0; }
+    .close_btn.active .panel_bg{ left: -100%; }
     /* footer */
     footer{ padding-top: 3rem; }
     footer .ftop .wrap{ display: block; padding-bottom: 50px; }
