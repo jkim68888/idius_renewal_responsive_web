@@ -14,6 +14,7 @@ html, body{ width: 100%; height: 100%; }
 header .only_pc, header .only_mobile{ display: none; }
 header{ width: 100%; border-bottom: 1px solid #707070; }
 header .wrap{ width: 1180px; max-width: 100%; margin: 0 auto; }
+header .ranking .num{ color: #FF7B30; padding-right: 1rem; }
 /* footer */
 footer{ width: 100%; background-color: #dfdfdf; }
 footer .fbottom{ width: 100%; background-color: #999; }
@@ -33,11 +34,33 @@ footer .sns{ display: flex; }
     *{ font-size: 16px; }
     /* header */
     header{ position: relative; height: 120px; }
+    header .only_pc{ display: inline; }
     header h1{ position: absolute; top: 58px; width: 100px; height: 40px; background-image: url(../images/common/header_logo_pc.png); }
     header .top_nav{ position: absolute; top: 0; left: 0; width: 100%; height: 40px; border-bottom: 1px solid #707070; } 
     header .top_nav .wrap{ position: relative; width: 1180px; max-width: 100%; margin: 0 auto; }
     header .top_nav ul{ position: absolute; right: 0; }
     header .top_nav li{ float: left; padding-left: 25px; line-height: 40px; }
+    header .gnb{ position: absolute; top: 68px; padding-left: 9rem; }
+    header .gnb > ul > li > a{ font-size: 1.5rem; }
+    header .gnb > ul{ display: flex; }
+    header .gnb > ul > li{ padding-right: 3rem; }
+    header .gnb > ul > li:hover .main_nav{ color: #FF7B30; }
+    header .sub_nav{ display: none; }
+    header .sWrap{ position: absolute; top: 64px; width: 30rem; height: 38px; margin-left: 23rem; }
+    header .search{ position: relative; float: left; width: 45%; height: 100%; border: 2px solid #FF7B30; }
+    header label{ position: relative; left: -999em; }
+    header .search button{ border: none; background-color: transparent; cursor: pointer; }
+    header .search input{ position: absolute; top: 2px; left: 2px; line-height: 30px; font-size: 0.95rem; color: #999; border: none; }
+    header .search .ico{ display: block; position: absolute; top: 5px; right: 5px; width: 26px; height: 26px; background-image: url(../images/common/header_search_ico_pc.png); }
+    header .ranking{ float: right; width: 42%; height: 100%; border-bottom: 2px solid #FF7B30; }
+    header .shop{ position: absolute; top: 45px; width: 60px; height: 100%; margin-left: 65rem; }
+    header .shop .shop_ico{ display: block; width: 45px; height: 45px; background-image: url(../images/common/header_cart_ico_pc.png); background-repeat: no-repeat; background-position: center; }
+    header .shop span, header .mypage span{ display: block; font-size: 0.95rem; padding-top: 0.5rem; }
+    header .mypage{ position: absolute; top: 52px; width: 55px; height: 100%; margin-left: 72rem; }
+    header .mypage .my_ico{ display: block; width: 37px; height: 37px; background-image: url(../images/common/header_mypage_ico_pc.png); background-repeat: no-repeat; background-position: center; }
+    header .shop a, header .mypage a{ display: block; }
+    header .shop:hover span{ color: #FF7B30; }
+    header .mypage:hover span{ color: #FF7B30; }
     /* footer */
     footer{ padding-top: 50px; }
     footer .wrap{ width: 1180px; max-width: 100%; margin: 0 auto; }

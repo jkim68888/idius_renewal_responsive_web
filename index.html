@@ -32,7 +32,7 @@
                 <div class="gnb">
                     <ul>
                         <li>
-                            <a href="#">작품</a>
+                            <a href="#" class="main_nav">작품</a>
                             <ul class="sub_nav">
                                 <li><a href="#">오늘의 발견</a></li>
                                 <li><a href="#">작가님 추천</a></li>
@@ -43,7 +43,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#">클래스</a>
+                            <a href="#" class="main_nav">클래스</a>
                             <ul class="sub_nav">
                                 <li><a href="#">인기 클래스</a></li>
                                 <li><a href="#">신규 클래스</a></li>
@@ -53,52 +53,59 @@
                         </li>
                     </ul>
                 </div>
-                <div class="search">
-                    <p>검색어를 입력하세요.</p>
-                    <div class="ico"></div>
-                </div>
-                <div class="ranking">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <span class="num">1</span>
-                                <span class="str">폰케이스</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="num">2</span>
-                                <span class="str">착즙주스</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="num">3</span>
-                                <span class="str">KF94 마스크</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="num">4</span>
-                                <span class="str">애견미용</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="num">5</span>
-                                <span class="str">베이킹 클래스</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="click"></div>
+                <div class="sWrap">
+                    <div class="search">
+                        <label for="searchbox">검색입력상자</label>
+                        <input type="text" id="searchbox" placeholder="검색어를 입력하세요.">
+                        <button type="submit" class="ico"></button>
+                    </div>
+                    <div class="ranking">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <span class="num">1</span>
+                                    <span class="str">폰케이스</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="num">2</span>
+                                    <span class="str">착즙주스</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="num">3</span>
+                                    <span class="str">KF94 마스크</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="num">4</span>
+                                    <span class="str">애견미용</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="num">5</span>
+                                    <span class="str">베이킹 클래스</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="click"></div>
+                    </div>
                 </div>
                 <div class="shop">
-                    <span class="shop_ico"></span>
-                    <span class="only_pc">장바구니</span>
+                    <a href="#">
+                        <span class="shop_ico"></span>
+                        <span class="only_pc">장바구니</span>
+                    </a>
                 </div>
                 <div class="mypage only_pc">
-                    <span class="my_ico"></span>
-                    <span>내정보</span>
+                    <a href="#">
+                        <span class="my_ico"></span>
+                        <span>내정보</span>
+                    </a>
                 </div>
                 <div class="panel_ico only_mobile">
                     <a href="#panel_open">
