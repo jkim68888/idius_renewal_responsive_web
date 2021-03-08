@@ -21,12 +21,19 @@ header label{ position: relative; left: -999em; }
 header .search button{ border: none; background-color: transparent; cursor: pointer; }
 header .search input{ position: absolute; color: #999; border: none; }
 
+/* ranking */
+header .ranking li{ line-height: 45px; overflow: hidden; }
+header .ranking li:hover .str{ font-style: italic; }
+
 /* ranking - mouse_on */
-header .mouse_on{ width: 100%; height: 500px; z-index: 2; overflow: visible; }
+header .mouse_on{ width: 100%; height: 520px; z-index: 2; overflow: visible; }
 header .mouse_on ul{ border: 1px solid #444; }
 header .mouse_on li{ line-height: 40px; padding: 10px; background-color: #fff; }
+header .mouse_on li:hover .str{ text-decoration: underline; color: #333; }
 header .mouse_on .click{ display: none; }
-
+header .mouse_on .more{ display: inline-block; width: 100%; line-height: 20px; border-top: 1px solid #444; }
+header .mouse_on .more a{ display: block; width: 100%; text-align: center; }
+header .mouse_on .more:hover .str{ color: #FF7B30; }
 
 /* footer */
 footer{ width: 100%; background-color: #dfdfdf; }
@@ -116,8 +123,8 @@ footer .sns{ display: flex; }
     header .search .ico{ display: block; position: absolute; top: 2px; right: 5px; width: 20px; height: 20px; background-image: url(../images/common/header_search_ico_tablet.png); }
     header .ranking{ float: right; width: 45%; height: 90%; border-bottom: 2px solid #FF7B30; }
     header .ranking .click{ position: absolute; bottom: 8px; right: 20px; width: 13px; height: 11px; background-image: url(../images/common/header_rank_ico_tablet.png); }
-    header .panel_bg{ position: fixed; top: 0; left: -80%; width: 80vw; height: 100vh; z-index: 10000; background-color: #F8F5EE; transition: 0.9s; }
-    header .panel_bg .banner{ position: absolute; top: 0; left: 0; width: 100%; height: 3.4rem; background-image: url(../images/common/panel_bn_tablet.png); background-position: center; }
+    header .panel_bg{ display: none; position: fixed; top: 0; left: 0; width: 80vw; height: 100vh; z-index: 10000; background-color: #F8F5EE; transition: 0.9s; }
+    header .panel_bg .banner{ position: absolute; top: 0; left: 0; width: 100%; height: 3rem; background-image: url(../images/common/panel_bn_tablet.png); background-position: center; }
     header .panel_bg .panel_logo{ position: absolute; top: 70px; width: 100%; height: 100%; background-image: url(../images/common/panel_logo_tablet.png); background-repeat: no-repeat; background-position: calc(50%) top; }
     header .panel_bg .top_nav{ position: absolute; top: 9.5rem; width: 100%; height: 8rem; padding: 0 15px; background-color: #999; }
     header .panel_bg .top_nav .wrap li a{ position: relative; top: 6rem; left: 6rem; color: #fff; font-size: 1rem; }
@@ -135,8 +142,14 @@ footer .sns{ display: flex; }
     header .panel_bg .sub_nav li:first-child{ padding-top: 10px; border-top: 1px solid #707070; }
     header .panel_bg .close_btn{ position: absolute; top: 0.5rem; left: 0.5rem; width: 40px; height: 40px; z-index: 100000; }
     header .panel_bg .close_btn a{ display: block; width: 100%; height: 100%; background-image: url(../images/common/panel_close_tablet.png); background-repeat: no-repeat; }
-    .panel_ico.active .panel_bg{ left: 0; }
-    .close_btn.active .panel_bg{ left: -80%; }
+    
+    /* ranking */
+    header .ranking li{ line-height: 25px; }
+    header .ranking .str{ font-size: 0.875rem; }
+    
+    /* ranking - mouse_on */
+    header .mouse_on{ position: absolute; right: 15px; width: 45%; }
+    
     /* footer */
     footer{ padding-top: 38px; }
     footer .ftop, footer .fbottom{ padding-left: 15px; }
@@ -159,7 +172,7 @@ footer .sns{ display: flex; }
 @media screen and (max-width: 767px){
     *{ font-size: 14px; }
     /* header */
-    header .panel_bg{ left: -100%; width: 100vw; }
+    header .panel_bg{ width: 100vw; }
     header .panel_bg .banner{ background-image: url(../images/common/panel_bn_mobile@2x.png); background-size: 100% 100%; }
     .panel_ico.active .panel_bg{ left: 0; }
     .close_btn.active .panel_bg{ left: -100%; }

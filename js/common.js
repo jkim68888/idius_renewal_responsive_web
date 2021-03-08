@@ -33,15 +33,16 @@ $(document).ready(function(){
     var sub = 'header .sub_nav';
     var open = 'header .panel_ico';
     var close = 'header .close_btn';
+    var panel = 'header .panel_bg';
     
     //pc이벤트함수
     function pcGnb(){
         $(main).off('click');
         
         $(main).hover(function(){
-            $(this).next().stop().slideDown('fast'); 
+            $(this).next().stop().slideDown('slow'); 
         },function(){
-            $(this).next().stop().slideUp('fast'); 
+            $(this).next().stop().slideUp('slow'); 
         });
 
         $(sub).hover(function(){
@@ -58,26 +59,30 @@ $(document).ready(function(){
         $(main).off('mouseleave');
         
         $(open).find('a').click(function(){
-            $(this).addClass('active');
+            $(panel).stop().fadeIn('fast');
+            $('html, body').css('overflow', 'hidden');
         });
 
         $(close).find('a').click(function(){
-            $(this).addClass('active');
+            $(panel).stop().fadeOut('fast');
         });
         
-        $(main).off('click');
-
         $(main).click(function(){
-            $(sub).stop().slideUp('fast');
-            $(this).next().stop().slideDown('fast'); 
-        },function(){
-            $(this).next().stop().slideUp('fast'); 
-        });
+            var has = $(this).next().css('display');
+            
+            if(has === 'none'){
+                $(sub).stop().slideUp('fast');
+                $(this).next().stop().slideDown('fast'); 
+            }else{
+                console.log('as');
+                $(sub).stop().slideUp('fast'); 
+                $(this).next().stop().slideUp('fast'); 
+            }
+        });       
         
     }
     
     $(window).resize(function(){
-        $(open, close).removeClass('active');
         $(sub).slideUp(0);
         
         var w = window.innerWidth; 
