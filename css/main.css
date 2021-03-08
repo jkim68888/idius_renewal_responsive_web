@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 /* pc, tablet, mobile 공통 */
-html, body{ overflow-x: hidden; }
 /* main */
 main{ position: relative; width: 100%; }
 main .swiper-container{ width: 100%; }

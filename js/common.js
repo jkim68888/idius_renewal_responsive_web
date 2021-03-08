@@ -1,7 +1,7 @@
 //aside
 $(document).ready(function(){
-    var btn = '.top_btn a';
-    var easing = 'easeOutQuart'; 
+    var btn = '.top_btn a'; 
+    var easing = 'easeOutQuart';
     
     $(window).scroll(function(){
         
@@ -15,17 +15,15 @@ $(document).ready(function(){
         
     });
     
-    $(btn).click(function(e){
+    $(btn).click(function(){         
         
-        e.preventDefault(); 
-        
-        $('html, body').stop().animate({
+        $(window).stop().animate({
             scrollTop: 0
         },1200,easing);
         
     });
-
 });
+    
 
 //gnb
 $(document).ready(function(){
@@ -40,9 +38,9 @@ $(document).ready(function(){
         $(main).off('click');
         
         $(main).hover(function(){
-            $(this).next().stop().slideDown('slow'); 
+            $(this).next().stop().slideDown('fast'); 
         },function(){
-            $(this).next().stop().slideUp('slow'); 
+            $(this).next().stop().slideUp('fast'); 
         });
 
         $(sub).hover(function(){
