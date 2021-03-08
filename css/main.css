@@ -124,18 +124,27 @@ main .swiper-pagination-bullet{ width: 12px; height: 12px; }
     .review .slide06 .img_box{ background-image: url(../images/main/review_img06_pc.jpg); }
     .review .txt_box{ padding: 1.5rem 1rem; }
     .review .txt_box h3{ font-size: 1.5rem; padding-bottom: 1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .review .txt_box p{ font-size: 0.95rem; padding-bottom: 0.5rem; line-height: 1.5; }
+    .review .txt_box p{ font-size: 0.95rem; padding-bottom: 0.5rem; line-height: 1.5; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .review .txt_box h4{ text-align: right; font-size: 0.875rem; }
     .review .rank{ display: flex; float: left; width: 120px; height: 1.2rem; }
     .review .rank > div{ width: 20px; height: 20px; background-repeat: no-repeat; }
     .review .slide01 .star01, .review .slide01 .star02, .review .slide01 .star03, .review .slide01 .star04, .review .slide01 .star05, .review .slide02 .star01, .review .slide02 .star02, .review .slide02 .star03, .review .slide02 .star04, .review .slide03 .star01, .review .slide03 .star02, .review .slide03 .star03, .review .slide03 .star04, .review .slide04 .star01, .review .slide04 .star02, .review .slide04 .star03, .review .slide05 .star01, .review .slide05 .star02, .review .slide05 .star03, .review .slide05 .star04, .review .slide06 .star01, .review .slide06 .star02{ background-image: url(../images/main/review_star_active_pc.png); }
     .review .slide02 .star05, .review .slide03 .star05, .review .slide04 .star04, .review .slide04 .star05, .review .slide05 .star05, .review .slide06 .star03, .review .slide06 .star04, .review .slide06 .star05{ background-image: url(../images/main/review_star_out_pc.png); }
-    
 }
 
 /* review */
-@media screen and (min-width: 1023px) and (max-width: 1060px){
-    
+@media screen and (min-width: 1370px) and (max-width: 1650px){
+    .review .txt_box{ padding: 1rem 0.5rem; }
+    .review .txt_box h3{ font-size: 1rem; padding-bottom: 0.3rem; }
+    .review .txt_box p{ font-size: 0.875rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .review .txt_box h4{ font-size: 0.875rem; }
+}
+@media screen and (min-width: 1024px) and (max-width: 1369px){
+    .review .txt_box{ padding: 0.5rem; }
+    .review .txt_box h3{ font-size: 0.875rem; padding-bottom: 0.3rem; }
+    .review .txt_box p{ font-size: 0.75rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .review .txt_box h4{ font-size: 0.5rem; }
+    .review .rank{ width: 85px; }
 }
 
 /* tablet */
@@ -183,6 +192,24 @@ main .swiper-pagination-bullet{ width: 12px; height: 12px; }
     .intro .view{ width: 110px; height: 34px; font-size: 0.95rem; line-height: 2.5; border-radius: 8px; }
     /* review */
     .review .swiper-container{ margin-left: 10%; }
+    .review h2{ font-size: 2rem; }
+    .review .swiper-button-next, .review .swiper-button-prev{ right: -999em; }
+    .review .swiper-slide{ max-width: 100%; max-height: 100%; height: calc(40vw); background-color: #fff; }
+    .review .img_box{ width: 100%; height: 65%; background-size: cover;}
+    .review .slide01 .img_box{ background-image: url(../images/main/review_img01_tablet.png); }
+    .review .slide02 .img_box{ background-image: url(../images/main/review_img02_tablet.png); }
+    .review .slide03 .img_box{ background-image: url(../images/main/review_img03_tablet.png); }
+    .review .slide04 .img_box{ background-image: url(../images/main/review_img04_tablet.png); }
+    .review .slide05 .img_box{ background-image: url(../images/main/review_img05_tablet.png); }
+    .review .slide06 .img_box{ background-image: url(../images/main/review_img06_tablet.png); }
+    .review .txt_box{ padding: 1rem; }
+    .review .txt_box h3{ font-size: 0.875rem; padding-bottom: 0.5rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .review .txt_box p{ font-size: 0.65rem; padding-bottom: 0.5rem; line-height: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .review .txt_box h4{ text-align: right; font-size: 0.5rem; }
+    .review .rank{ display: flex; float: left; width: 80px; height: 1.2rem; }
+    .review .rank > div{ width: 15px; height: 15px; background-repeat: no-repeat; }
+    .review .slide01 .star01, .review .slide01 .star02, .review .slide01 .star03, .review .slide01 .star04, .review .slide01 .star05, .review .slide02 .star01, .review .slide02 .star02, .review .slide02 .star03, .review .slide02 .star04, .review .slide03 .star01, .review .slide03 .star02, .review .slide03 .star03, .review .slide03 .star04, .review .slide04 .star01, .review .slide04 .star02, .review .slide04 .star03, .review .slide05 .star01, .review .slide05 .star02, .review .slide05 .star03, .review .slide05 .star04, .review .slide06 .star01, .review .slide06 .star02{ background-image: url(../images/main/review_star_active_tablet.png); }
+    .review .slide02 .star05, .review .slide03 .star05, .review .slide04 .star04, .review .slide04 .star05, .review .slide05 .star05, .review .slide06 .star03, .review .slide06 .star04, .review .slide06 .star05{ background-image: url(../images/main/review_star_out_tablet.png); }
 }
 
 
@@ -232,7 +259,26 @@ main .swiper-pagination-bullet{ width: 12px; height: 12px; }
     .intro .tutors .view{ position: absolute; top: 18rem; right: 11rem; }
     .intro .view{ width: 7rem; height: 2.2rem; font-size: 0.875rem; line-height: 2.5; border-radius: 5px; }
     /* review */
+    .review{ padding-top: 0; }
     .review .swiper-container{ margin-left: 5%; }
+    .review h2{ font-size: 1.28rem; padding: 40px 0; }
+    .review .swiper-button-next, .review .swiper-button-prev{ right: -999em; }
+    .review .swiper-slide{ max-width: 100%; max-height: 100%; height: calc(42vw); background-color: #fff; }
+    .review .img_box{ width: 100%; height: 65%; background-size: cover;}
+    .review .slide01 .img_box{ background-image: url(../images/main/review_img01_tablet.png); }
+    .review .slide02 .img_box{ background-image: url(../images/main/review_img02_tablet.png); }
+    .review .slide03 .img_box{ background-image: url(../images/main/review_img03_tablet.png); }
+    .review .slide04 .img_box{ background-image: url(../images/main/review_img04_tablet.png); }
+    .review .slide05 .img_box{ background-image: url(../images/main/review_img05_tablet.png); }
+    .review .slide06 .img_box{ background-image: url(../images/main/review_img06_tablet.png); }
+    .review .txt_box{ padding: 0.5rem; }
+    .review .txt_box h3{ font-size: 0.875rem; padding-bottom: 0.2rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .review .txt_box p{ display: none; }
+    .review .txt_box h4{ text-align: right; font-size: 0.45rem; }
+    .review .rank{ display: flex; float: left; width: 100%; height: 1.2rem; }
+    .review .rank > div{ width: 12px; height: 12px; background-repeat: no-repeat; }
+    .review .slide01 .star01, .review .slide01 .star02, .review .slide01 .star03, .review .slide01 .star04, .review .slide01 .star05, .review .slide02 .star01, .review .slide02 .star02, .review .slide02 .star03, .review .slide02 .star04, .review .slide03 .star01, .review .slide03 .star02, .review .slide03 .star03, .review .slide03 .star04, .review .slide04 .star01, .review .slide04 .star02, .review .slide04 .star03, .review .slide05 .star01, .review .slide05 .star02, .review .slide05 .star03, .review .slide05 .star04, .review .slide06 .star01, .review .slide06 .star02{ background-image: url(../images/main/review_star_active_tablet.png); }
+    .review .slide02 .star05, .review .slide03 .star05, .review .slide04 .star04, .review .slide04 .star05, .review .slide05 .star05, .review .slide06 .star03, .review .slide06 .star04, .review .slide06 .star05{ background-image: url(../images/main/review_star_out_tablet.png); }
 }
 
 
