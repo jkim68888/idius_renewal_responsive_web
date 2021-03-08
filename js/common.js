@@ -43,6 +43,12 @@ $(document).ready(function(){
         },function(){
             $(this).next().stop().slideUp('fast'); 
         });
+
+        $(sub).hover(function(){
+            $(this).stop().slideDown(0);
+        },function(){
+            $(this).stop().slideUp('fast');
+        });
     }
     
     
