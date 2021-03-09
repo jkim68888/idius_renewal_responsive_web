@@ -1,3 +1,40 @@
+//popup
+$(document).ready(function(){
+    
+    function setCookie(name, value, expiredays){
+        var todayDate = new Date();
+        todayDate.setDate(todayDate.getDate() + expiredays);
+        document.cookie = name + '=' + escape( value ) + '; path=/; expires=' + todayDate.toGMTString() + ';';
+    }
+    
+    var popup = '.popup';
+    var close = '#close';
+    var chkbox = '#chkBox';
+   
+    $(close).click(function(){
+        $(popup).stop().fadeOut(0);
+        $('html, body').css('overflow','visible');
+    });
+
+    $(chkbox).click(function(){
+        setCookie('exCookie','done',1); 
+        $(popup).stop().fadeOut(0);
+        $('html, body').css('overflow','visible');
+    });        
+    
+    var cookieData = document.cookie;
+    
+    if(cookieData.indexOf('exCookie=done') < 0){
+        $(popup).fadeIn(0);
+        $('html, body').css('overflow','hidden');
+    }else{
+        $(popup).fadeOut(0);
+        $('html, body').css('overflow','visible');
+    }
+    
+}); 
+
+
 //main
 $(document).ready(function(){
     var swiper = new Swiper('main .swiper-container', {

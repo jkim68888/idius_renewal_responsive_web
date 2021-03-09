@@ -22,8 +22,12 @@ header .search button{ border: none; background-color: transparent; cursor: poin
 header .search input{ position: absolute; color: #999; border: none; }
 
 /* ranking */
-header .ranking li{ line-height: 45px; overflow: hidden; }
+header .ranking li{ line-height: 45px; }
 header .ranking li:hover .str{ font-style: italic; }
+
+/* ranking - mouse_out */
+header .mouse_out{ height: 45px; overflow: hidden; }
+header .mouse_out ul{ position: absolute; }
 
 /* ranking - mouse_on */
 header .mouse_on{ width: 100%; height: 520px; z-index: 2; overflow: visible; }
@@ -47,7 +51,10 @@ footer a, footer .address, footer .fright p{ color: #666; }
 footer .sns{ display: flex; }
 /* aside */
 .top_btn{ display: none; position: fixed; bottom: 100px; right: 80px; z-index: 2; }
-.top_btn a{ display: block; border: 1px solid #707070; background-color: #fff;}
+.top_btn a{ position: relative; display: block; border: 1px solid #707070; background-color: #fff; box-shadow: 3px 3px 3px rgba(0,0,0,0.3); }
+.top_btn:hover a{ background-color: #FF7B30; }
+.top_btn:hover span{ color: #fff; }
+.top_btn a span{ position: absolute; top: 15px; left: 10px; width: 20px; height: 20px; }
 
 /* pc */
 @media screen and (min-width: 1024px){
@@ -142,10 +149,10 @@ footer .sns{ display: flex; }
     header .panel_bg .sub_nav li:first-child{ padding-top: 10px; border-top: 1px solid #707070; }
     header .panel_bg .close_btn{ position: absolute; top: 0.5rem; left: 0.5rem; width: 40px; height: 40px; z-index: 100000; }
     header .panel_bg .close_btn a{ display: block; width: 100%; height: 100%; background-image: url(../images/common/panel_close_tablet.png); background-repeat: no-repeat; }
-    
     /* ranking */
     header .ranking li{ line-height: 25px; }
     header .ranking .str{ font-size: 0.875rem; }
+    header .mouse_out{ height: 25px; overflow: hidden; }
     
     /* ranking - mouse_on */
     header .mouse_on{ position: absolute; right: 15px; width: 45%; }
@@ -163,8 +170,11 @@ footer .sns{ display: flex; }
     footer .sns li{ padding-right: 0.5rem; }
     footer .fbottom{ padding: 10px 0; }
     footer .fbottom p{ font-size: 0.75rem; }
+   
     /* aside */
+    .top_btn{ right: 35px; }
     .top_btn a{ width: 45px; height: 45px; }
+    .top_btn a span{ top: 10px; left: 7px; }
 }
 
 
@@ -185,7 +195,9 @@ footer .sns{ display: flex; }
     footer .nav li{ padding-right: 1rem; }
     footer .fright p{ font-size: 0.875rem; padding: 0.5rem 0; }
     /* aside */
+    .top_btn{ right: 30px; }
     .top_btn a{ width: 40px; height: 40px; }
+    .top_btn a span{ top: 10px; left: 5px; }
 }
 
 /* iphone5 & se */

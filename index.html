@@ -18,6 +18,27 @@
         <script src="js/main.js"></script>
     </head>
     <body>
+        <div class="popup">
+            <div class="pwrap">
+                <h3>Responsive Web</h3>
+                <div class="ptop">
+                    <p class="notice">
+                        본 사이트는 상업적 목적이 아닌<br>
+                        <span>개인 포트폴리오 용도</span>로<br>
+                        만들어 졌습니다.<br>
+                        홈페이지의 일부 내용과<br>
+                        이미지 등은, 그 출처가<br>
+                        따로 있음을 밝힙니다.
+                    </p>
+                </div>
+                <div class="pbottom">
+                    <a href="#close_all_day" id="chkBox">
+                        오늘 하루 보지 않기 X
+                    </a>
+                </div>
+                <a href="#closepop" title="팝업창 닫기" id="close"></a>
+            </div>
+        </div>
         <header>
             <div class="wrap">
                 <h1 class="main_logo"></h1>
@@ -69,37 +90,37 @@
                     </div>
                     <div class="ranking">
                         <ul>
-                            <li>
+                            <li data-index="0">
                                 <a href="#">
                                     <span class="num">1</span>
                                     <span class="str">폰케이스</span>
                                 </a>
                             </li>
-                            <li>
+                            <li data-index="1">
                                 <a href="#">
                                     <span class="num">2</span>
                                     <span class="str">착즙주스</span>
                                 </a>
                             </li>
-                            <li>
+                            <li data-index="2">
                                 <a href="#">
                                     <span class="num">3</span>
                                     <span class="str">KF94 마스크</span>
                                 </a>
                             </li>
-                            <li>
+                            <li data-index="3">
                                 <a href="#">
                                     <span class="num">4</span>
                                     <span class="str">애견미용</span>
                                 </a>
                             </li>
-                            <li>
+                            <li data-index="4">
                                 <a href="#">
                                     <span class="num">5</span>
                                     <span class="str">베이킹 클래스</span>
                                 </a>
                             </li>
-                            <li class="more">
+                            <li class="more" data-index="5">
                                 <a href="#">
                                     <span class="str">더보기</span>
                                 </a>
@@ -511,7 +532,9 @@
             </div>
         </footer>
         <div class="top_btn">
-            <a href="#">TOP</a>
+            <a href="#">
+                <span>TOP</span>
+            </a>
         </div>
     </body>
 </html>

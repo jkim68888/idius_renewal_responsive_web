@@ -15,9 +15,10 @@ $(document).ready(function(){
         
     });
     
-    $(btn).click(function(){         
-        
-        $(window).stop().animate({
+    $(btn).click(function(e){         
+        e.preventDefault();
+
+        $('html, body').stop().animate({
             scrollTop: 0
         },1200,easing);
         
@@ -55,10 +56,11 @@ $(document).ready(function(){
     function mGnb(){
         $(main).off('mouseenter');
         $(main).off('mouseleave');
+        $(sub).off('mouseenter');
+        $(sub).off('mouseleave');
         
         $(open).find('a').click(function(){
             $(panel).stop().fadeIn('fast');
-            $('html, body').css('overflow', 'hidden');
         });
 
         $(close).find('a').click(function(){
@@ -68,11 +70,10 @@ $(document).ready(function(){
         $(main).click(function(){
             var has = $(this).next().css('display');
             
-            if(has === 'none'){
+            if(has == 'none'){
                 $(sub).stop().slideUp('fast');
                 $(this).next().stop().slideDown('fast'); 
             }else{
-                console.log('as');
                 $(sub).stop().slideUp('fast'); 
                 $(this).next().stop().slideUp('fast'); 
             }
@@ -81,13 +82,16 @@ $(document).ready(function(){
     }
     
     $(window).resize(function(){
+        $(main).off('click');
         $(sub).slideUp(0);
         
         var w = window.innerWidth; 
         
         if(w >= 1024){ 
+            $(panel).stop().fadeIn(0);
             pcGnb();
         }else{ 
+            $(panel).stop().fadeOut(0);
             mGnb(); 
         }
     });
@@ -97,3 +101,54 @@ $(document).ready(function(){
 });
 
 
+//ranking
+$(document).ready(function(){
+    var list = 'header .mouse_out ul'; 
+    var ranking = 'header .ranking';
+    var h = $(ranking).find('li').outerHeight();
+
+    console.log(h);
+
+    $(ranking).addClass('mouse_out');
+   
+    //ossam's
+    $(list).find('li:first a').attr('tabindex','0');
+
+
+    var topMove = function(){
+  
+        $(list).stop().animate({
+            top: '-=' + h
+        },'fast',function(){
+            
+            $(list).find('li').first().appendTo(list);
+            
+            $(list).css('top',0);
+            
+            $(list).find('li a').attr('tabindex','-1');
+            $(list).find('li:first a').attr('tabindex','0'); 
+        });
+    }
+
+    var autoMove = setInterval(topMove,3000);
+
+    $(ranking).mouseenter(function(){
+        $(this).removeClass('mouse_out');
+        $(this).addClass('mouse_on');
+        clearInterval(autoMove);
+        
+        for(var i=0; i<=5; i++){
+            $(ranking).find('li[data-index=' + i + ']').appendTo($(ranking).find(' > ul'));
+        }
+    });
+
+    $(ranking).mouseleave(function(){
+        $(this).removeClass('mouse_on');
+        $(this).addClass('mouse_out');
+        autoMove = setInterval(topMove,3000);
+    });
+ 
+    
+    
+
+});
