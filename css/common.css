@@ -186,6 +186,10 @@ footer .sns{ display: flex; }
     header .panel_bg .banner{ background-image: url(../images/common/panel_bn_mobile@2x.png); background-size: 100% 100%; }
     .panel_ico.active .panel_bg{ left: 0; }
     .close_btn.active .panel_bg{ left: -100%; }
+    header .panel_bg .top_nav .wrap li a{ position: relative; top: 5.5rem; left: 2.5rem; }
+    header .panel_bg .gnb{ top: 19rem; }
+    header .panel_bg .gnb > ul > li{ padding-bottom: 1rem; }
+    header .panel_bg .sub_nav li:first-child{ padding: 0; }
     /* footer */
     footer{ padding-top: 3rem; }
     footer .ftop .wrap{ display: block; padding-bottom: 50px; }
@@ -203,4 +207,8 @@ footer .sns{ display: flex; }
 /* iphone5 & se */
 @media screen and (max-width: 320px){
     *{ font-size: 12px; }
+    /* panel */
+    header .panel_bg .top_nav .wrap li{ background-size: 30px 30px; }
+    header .panel_bg .close_btn a{ background-size: 30px 30px; }
+    header .panel_bg .panel_logo{ top: 55px; }
 }
