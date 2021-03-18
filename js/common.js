@@ -61,12 +61,12 @@ $(document).ready(function(){
         
         $(open).find('a').click(function(){
             $(panel).stop().fadeIn('fast');
-            $('html,body').css('overflow','hidden');
+            $('html,body').addClass('active');
         });
 
         $(close).find('a').click(function(){
             $(panel).stop().fadeOut('fast');
-            $('html,body').css('overflow','visible');
+            $('html,body').removeClass('active');
         });
         
         $(main).click(function(){

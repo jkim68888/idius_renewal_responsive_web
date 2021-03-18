@@ -117,6 +117,7 @@ footer .sns{ display: flex; }
 /* tablet */
 @media screen and (max-width : 1023px){
     *{ font-size: 16px; }
+    body.active, html.active{ overflow: hidden !important; } 
     /* header */
     header{ position: relative; height: 75px; }
     header .only_mobile{ display: inline; }
